@@ -72,10 +72,10 @@ $ftp = new Ftp;
 $ftp->connect($backup_settings->getFTPHost());
 $ftp->login($backup_settings->getFTPUser(), $backup_settings->getFTPPass());
 
-$ftp->mkDirRecursive($backup_settings->getRemoteDocumentStoragePath());
-$worker->uploadFiles($ftp, $backup_settings->getTempDocumentStoragePath(), $backup_settings->getRemoteDocumentStoragePath());
-$ftp->mkDirRecursive($backup_settings->getRemoteDatabaseStoragePath());
-$worker->uploadFiles($ftp, $backup_settings->getTempDatabaseStoragePath(), $backup_settings->getRemoteDatabaseStoragePath());
+$ftp->mkDirRecursive($backup_settings->getRemoteDocumentStoragePath().$date."/");
+$worker->uploadFiles($ftp, $backup_settings->getTempDocumentStoragePath(), $backup_settings->getRemoteDocumentStoragePath().$date."/");
+$ftp->mkDirRecursive($backup_settings->getRemoteDatabaseStoragePath().$date."/");
+$worker->uploadFiles($ftp, $backup_settings->getTempDatabaseStoragePath(), $backup_settings->getRemoteDatabaseStoragePath().$date."/");
 
 $ftp->close();
 
