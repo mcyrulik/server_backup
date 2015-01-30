@@ -15,11 +15,11 @@ Asssuming that you didn't make any mistakes in entering things, after some amoun
 
 Download all the files in this repository to a folder on your server..
 
-It is not recommended that this is placed in a location on your server where it can be accessed from a public URL. 
+It is not recommended that this is placed in a location on your server where it can be accessed from a public URL. Security is important.
 
 ## Usage
 
-This can be run by setting up a cron job. something like "php -q /path/to/server_backup.php" is pretty sufficient. currently, the script only allows for daily runs(the date paramter doens't have time in it... yet.)
+This can be run by setting up a cron job. something like "php -q /path/to/server_backup.php" is pretty sufficient. Currently, the script only allows for daily runs (the date parameter doesn't have time in it... yet.)
 
 
 ## DISCLAIMER
