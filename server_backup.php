@@ -46,7 +46,7 @@ foreach ($user_dir_list as $directory) {
 // Make a PDO Connextion to DB server..
 $server = $backup_settings->getDBHost();
 
-$dbh = new PDO( "mysql:host=localhost", $backup_settings->getDBUser(), $backup_settings->getDBPass());
+$dbh = new PDO( "mysql:host=".$server, $backup_settings->getDBUser(), $backup_settings->getDBPass());
 $sql = 'SHOW DATABASES;';
 
 $db_path = $backup_settings->getTempDatabaseStoragePath();
