@@ -63,7 +63,7 @@ foreach ($dbh->query($sql) as $row) {
 
     echo "Archiving Database: {$database} to {$archive_name}...";
 
-    $worker->archiveDatabase($backup_settings->getDBUser(), $backup_settings->getDBPass(), $database, $archive_name);
+    $worker->archiveDatabase($backup_settings->getDBUser(), $backup_settings->getDBPass(), $database, $backup_settings->getDBHost(), $archive_name);
 
     echo "Done.\n";
 }

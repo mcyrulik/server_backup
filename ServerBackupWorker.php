@@ -34,9 +34,8 @@ class ServerBackupWorker {
         @shell_exec($shell_command);
     }
 
-    public function archiveDatabase($username, $password, $database, $archivename) {
-        $shell_command = "MYSQL_PWD={$password} mysqldump {$database} -u'{$username}' | gzip -c | cat > {$archivename}";
-
+    public function archiveDatabase($username, $password, $database, $hostname, $archivename) {
+        $shell_command = "MYSQL_PWD={$password} mysqldump {$database} -h {$hostname} -u'{$username}' | gzip -c | cat > {$archivename}";
         @shell_exec($shell_command);
     }
 
