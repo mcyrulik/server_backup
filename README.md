@@ -26,7 +26,7 @@ This can be run by setting up a cron job. something like "php -q /path/to/server
 **Use at your own risk. This script intentionally does not write to any of the directories, or attempt in any way to alter the databases that we are dumping, but odd things happen. Please be careful. Also: this script does absolutely, positively nothing to verify that the zip archives are usable. This should be part of your workflow for disaster recovery anyway, right?**
 
 ## Issues and suggestions
-If you find issues with the way teh plugin works, or have a suggestion as to how you think it could be improved in later release or future development, please [submit an issue](https://github.com/mcyrulik/wp-plugin-dev-mode/issues)
+If you find issues with the way teh plugin works, or have a suggestion as to how you think it could be improved in later release or future development, please [submit an issue](https://github.com/mcyrulik/server_backup/issues)
 
 ## Versions
 * **v1.0.0** - Initial release.
